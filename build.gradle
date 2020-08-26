@@ -14,9 +14,6 @@ repositories{
 	maven {
 		url = 'https://raw.githubusercontent.com/Szum123321/SzumMaven/master/'
 	}
-	maven {
-		url "http://server.bbkr.space:8081/artifactory/libs-release" 
-	}
 	jcenter()
 }
 
@@ -41,10 +38,12 @@ dependencies {
 	modApi("me.shedaniel.cloth:config-2:4.7.0-unstable") {
         exclude(group: "net.fabricmc.fabric-api")
     }
-	include "me.shedaniel.cloth:config-2:4.7.0-unstable"
+	include("me.shedaniel.cloth:config-2:4.7.0-unstable")
 
-	// ModMenu
-	modApi("io.github.prospector:modmenu:${project.modmenu_version}")
+	// Modmenu
+	modApi("io.github.prospector:modmenu:${project.modmenu_version}") {
+		exclude(group: "net.fabricmc.fabric-api")
+	}
 }
 
 processResources {

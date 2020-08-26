@@ -1,7 +1,6 @@
 package mounderfod.moundertweaks;
 
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
-import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry;
 import me.sargunvohra.mcmods.autoconfig1u.serializer.JanksonConfigSerializer;
 import mounderfod.moundertweaks.util.MounderTweaksConfig;
 import net.szum123321.tool_action_helper.api.ShovelPathHelper;
@@ -14,8 +13,6 @@ import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 
 public class MounderTweaksMain implements ModInitializer{
-
-    @ConfigEntry.Gui.Excluded
     public static MounderTweaksConfig CONFIG;
 
     @Override
