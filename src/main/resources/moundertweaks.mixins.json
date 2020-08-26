@@ -1,0 +1,14 @@
+{
+    "required": true,
+    "minVersion": "0.8",
+    "package": "mounderfod.moundertweaks.mixin",
+    "compatibilityLevel": "JAVA_8",
+    "mixins": [
+        "SandBlockMixin"
+    ],
+    "client": [],
+    "server": [],
+    "injectors": {
+      "defaultRequire": 1
+    }
+  }

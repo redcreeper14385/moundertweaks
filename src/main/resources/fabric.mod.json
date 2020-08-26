@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "moundertweaks",
+  "version": "1.0.0",
+
+  "name": "MounderTweaks",
+  "description": "A bunch of useful tweaks!",
+  "authors": [
+    "mounderfod"
+  ],
+  "contact": {
+  },
+
+  "license": "MIT",
+  "icon": "assets/moundertweaks/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "mounderfod.moundertweaks.MounderTweaksMain"
+    ]
+  },
+  "mixins": [
+    "moundertweaks.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+  }
+}
