@@ -9,3 +9,6 @@
 build
 out
 target
+
+# Fabric
+run

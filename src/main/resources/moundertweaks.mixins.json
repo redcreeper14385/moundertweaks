@@ -4,7 +4,7 @@
     "package": "mounderfod.moundertweaks.mixin",
     "compatibilityLevel": "JAVA_8",
     "mixins": [
-        "SandBlockMixin"
+      "FallingBlockMixin"
     ],
     "client": [],
     "server": [],

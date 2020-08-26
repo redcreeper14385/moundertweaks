@@ -4,33 +4,33 @@ import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import me.sargunvohra.mcmods.autoconfig1u.ConfigData;
 import me.sargunvohra.mcmods.autoconfig1u.annotation.Config;
 import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry;
+import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry.Gui.RequiresRestart;
+import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry.Gui.Tooltip;
 import me.sargunvohra.mcmods.autoconfig1u.serializer.JanksonConfigSerializer;
-import me.sargunvohra.mcmods.autoconfig1u.shadowed.blue.endless.jankson.Comment;
 
 @Config(name = "moundertweaks")
 public class MounderTweaksConfig implements ConfigData {
-
     @ConfigEntry.Gui.Excluded
     public static MounderTweaksConfig CONFIG = new MounderTweaksConfig();
 
-    @ConfigEntry.Gui.RequiresRestart
-    @Comment("Enable composting of poisonous potatoes?")
+    @RequiresRestart
+    @Tooltip
     public boolean compostablePoisonousPotatoes = true;
 
-    @ConfigEntry.Gui.RequiresRestart
-    @Comment("Enable grinding of cobblestone to gravel and gravel to sand by right-clicking with a shovel?")
+    @RequiresRestart
+    @Tooltip
     public boolean shovelGrinding = true;
 
-    @ConfigEntry.Gui.RequiresRestart
-    @Comment("Enable use of gunpowder as a furnace fuel?")
+    @RequiresRestart
+    @Tooltip
     public boolean explosiveFuel = true;
 
-    @Comment("Enable use of blaze powder as a furnace fuel?")
-    @ConfigEntry.Gui.RequiresRestart
+    @RequiresRestart
+    @Tooltip
     public boolean fieryFuel = true;
 
-    @ConfigEntry.Gui.RequiresRestart
-    @Comment("Enable conversion of Sand to Glass when touching lava?")
+    @RequiresRestart
+    @Tooltip
     public boolean lavaSand = false;
 
     public static void initialize() {
