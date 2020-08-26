@@ -25,23 +25,23 @@ public class MounderTweaksMain implements ModInitializer{
         MounderTweaksConfig.initialize();
         
         // Compostable Poisonous Potatoes
-        if (MounderTweaksConfig.CONFIG.compostablePoisonousPotatoes == true) {
+        if (MounderTweaksConfig.CONFIG.compostablePoisonousPotatoes) {
             CompostingChanceRegistry.INSTANCE.add(Items.POISONOUS_POTATO, 0.1f);
         }
 
         // Shovel Grinding
-        if (MounderTweaksConfig.CONFIG.shovelGrinding == true) {
+        if (MounderTweaksConfig.CONFIG.shovelGrinding) {
             ShovelPathHelper.getInstance().addNewPathPair(Blocks.COBBLESTONE, Blocks.GRAVEL.getDefaultState());
             ShovelPathHelper.getInstance().addNewPathPair(Blocks.GRAVEL, Blocks.SAND.getDefaultState());
         }
 
         // Explosive Smelting
-        if (MounderTweaksConfig.CONFIG.explosiveFuel == true) {
+        if (MounderTweaksConfig.CONFIG.explosiveFuel) {
             FuelRegistry.INSTANCE.add(Items.GUNPOWDER, 1200);
         }
 
         // Fiery Smelting
-        if (MounderTweaksConfig.CONFIG.fieryFuel == true) {
+        if (MounderTweaksConfig.CONFIG.fieryFuel) {
             FuelRegistry.INSTANCE.add(Items.BLAZE_POWDER, 1200);
         }
 
