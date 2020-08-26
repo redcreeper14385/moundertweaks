@@ -21,15 +21,15 @@ repositories{
 }
 
 dependencies {
-	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	minecraft("com.mojang:minecraft:${project.minecraft_version}")
+	mappings("net.fabricmc:yarn:${project.yarn_mappings}:v2")
+	modImplementation("net.fabricmc:fabric-loader:${project.loader_version}")
 
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	modImplementation("net.fabricmc.fabric-api:fabric-api:${project.fabric_version}")
 
 	// Tool Action Helper (shovel, hoe and axe ability API)
-	modImplementation "net.szum123321:tool_action_helper:1.0.1"
-	include "net.szum123321:tool_action_helper:1.0.1"
+	modImplementation("net.szum123321:tool_action_helper:1.0.1")
+	include("net.szum123321:tool_action_helper:1.0.1")
 
 	// Auto Config
 	modApi("me.sargunvohra.mcmods:autoconfig1u:3.2.0-unstable") {
@@ -42,6 +42,9 @@ dependencies {
         exclude(group: "net.fabricmc.fabric-api")
     }
 	include "me.shedaniel.cloth:config-2:4.7.0-unstable"
+
+	// ModMenu
+	modApi("io.github.prospector:modmenu:${project.modmenu_version}")
 }
 
 processResources {

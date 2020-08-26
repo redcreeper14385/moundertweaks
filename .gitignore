@@ -1,0 +1,11 @@
+# Idea
+.idea/
+
+# Garbage
+.DS_Store
+
+# Gradle
+.gradle
+build
+out
+target

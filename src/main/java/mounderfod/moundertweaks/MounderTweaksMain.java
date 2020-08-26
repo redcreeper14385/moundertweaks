@@ -15,6 +15,7 @@ import net.minecraft.item.Items;
 import net.minecraft.text.LiteralText;
 import net.minecraft.util.math.BlockPos;
 
+import mounderfod.moundertweaks.util.MounderTweaksConfig;
 import net.szum123321.tool_action_helper.api.ShovelPathHelper;
 
 public class MounderTweaksMain implements ModInitializer{
