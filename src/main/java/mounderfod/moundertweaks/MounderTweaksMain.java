@@ -1,5 +1,8 @@
 package mounderfod.moundertweaks;
 
+import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
+import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry;
+import me.sargunvohra.mcmods.autoconfig1u.serializer.JanksonConfigSerializer;
 import mounderfod.moundertweaks.util.MounderTweaksConfig;
 import net.szum123321.tool_action_helper.api.ShovelPathHelper;
 
@@ -12,28 +15,32 @@ import net.fabricmc.fabric.api.registry.FuelRegistry;
 
 public class MounderTweaksMain implements ModInitializer{
 
+    @ConfigEntry.Gui.Excluded
+    public static MounderTweaksConfig CONFIG;
+
     @Override
     public void onInitialize() {
-        MounderTweaksConfig.initialize();
-        
+        AutoConfig.register(MounderTweaksConfig.class, JanksonConfigSerializer::new);
+        CONFIG = AutoConfig.getConfigHolder(MounderTweaksConfig.class).getConfig();
+
         // Compostable Poisonous Potatoes
-        if (MounderTweaksConfig.CONFIG.compostablePoisonousPotatoes) {
+        if (CONFIG.compostablePoisonousPotatoes) {
             CompostingChanceRegistry.INSTANCE.add(Items.POISONOUS_POTATO, 0.1f);
         }
 
         // Shovel Grinding
-        if (MounderTweaksConfig.CONFIG.shovelGrinding) {
+        if (CONFIG.shovelGrinding) {
             ShovelPathHelper.getInstance().addNewPathPair(Blocks.COBBLESTONE, Blocks.GRAVEL.getDefaultState());
             ShovelPathHelper.getInstance().addNewPathPair(Blocks.GRAVEL, Blocks.SAND.getDefaultState());
         }
 
         // Explosive Smelting
-        if (MounderTweaksConfig.CONFIG.explosiveFuel) {
+        if (CONFIG.explosiveFuel) {
             FuelRegistry.INSTANCE.add(Items.GUNPOWDER, 1200);
         }
 
         // Fiery Smelting
-        if (MounderTweaksConfig.CONFIG.fieryFuel) {
+        if (CONFIG.fieryFuel) {
             FuelRegistry.INSTANCE.add(Items.BLAZE_POWDER, 1200);
         }
     }
