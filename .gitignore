@@ -12,3 +12,10 @@ target
 
 # Fabric
 run
+
+# Other Stuff
+bin/
+.settings/
+.classpath
+.project
+logs/
