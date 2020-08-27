@@ -1,4 +1,4 @@
-package mounderfod.moundertweaks.mixin;
+package mounderfod.moundertweaks.mixin.client;
 
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import mounderfod.moundertweaks.util.MounderTweaksConfig;

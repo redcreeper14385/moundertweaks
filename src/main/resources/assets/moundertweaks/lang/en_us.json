@@ -12,5 +12,6 @@
     "text.autoconfig.moundertweaks.option.lavaSand": "Glass generators",
     "text.autoconfig.moundertweaks.option.lavaSand.@Tooltip": "Enable conversion of Sand to Glass when touching lava",
     "gui.moundertweaks.config": "MounderTweaks Configuration",
-    "text.autoconfig.moundertweaks.title": "MounderTweaks Configuration"
+    "text.autoconfig.moundertweaks.option.potionGlint": "Potion Glint",
+    "text.autoconfig.moundertweaks.option.potionGlint.@Tooltip": "Enable the enchantment glint rendering on potions"
 }

@@ -1,29 +1,18 @@
 package mounderfod.moundertweaks.util;
 
-import me.sargunvohra.mcmods.autoconfig1u.ConfigData;
 import me.sargunvohra.mcmods.autoconfig1u.annotation.Config;
-import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry.Gui.RequiresRestart;
-import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry.Gui.Tooltip;
+import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry.Category;
+import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry.Gui.TransitiveObject;
+import me.sargunvohra.mcmods.autoconfig1u.serializer.PartitioningSerializer;
 
 @Config(name = "moundertweaks")
-public class MounderTweaksConfig implements ConfigData {
-    @RequiresRestart
-    @Tooltip
-    public boolean compostablePoisonousPotatoes = true;
+public class MounderTweaksConfig extends PartitioningSerializer.GlobalData {
+    @Category("common")
+    @TransitiveObject
+    public CommonConfig common = new CommonConfig();
 
-    @RequiresRestart
-    @Tooltip
-    public boolean shovelGrinding = true;
-
-    @RequiresRestart
-    @Tooltip
-    public boolean explosiveFuel = true;
-
-    @RequiresRestart
-    @Tooltip
-    public boolean fieryFuel = true;
-
-    @RequiresRestart
-    @Tooltip
-    public boolean lavaSand = false;
+    @Category("client")
+    @TransitiveObject
+    public ClientConfig client = new ClientConfig();
 }
+
