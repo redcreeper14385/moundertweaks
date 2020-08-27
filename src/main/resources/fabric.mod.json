@@ -1,34 +1,37 @@
 {
   "schemaVersion": 1,
   "id": "moundertweaks",
-  "version": "1.0.0",
-
+  "version": "${version}",
   "name": "MounderTweaks",
   "description": "A bunch of useful tweaks!",
   "authors": [
     "mounderfod"
   ],
   "contact": {
+    "homepage": "https://github.com/redcreeper14385/moundertweaks",
+    "issues": "https://github.com/redcreeper14385/moundertweaks/issues",
+    "sources": "https://github.com/redcreeper14385/moundertweaks.git"
   },
-
   "license": "MIT",
   "icon": "assets/moundertweaks/icon.png",
-
   "environment": "*",
   "entrypoints": {
     "main": [
       "mounderfod.moundertweaks.MounderTweaksMain"
+    ],
+    "client": [
+      "mounderfod.moundertweaks.MounderTweaksClient"
+    ],
+    "modmenu": [
+      "mounderfod.moundertweaks.util.MounderTweaksModmenuImpl"
     ]
   },
   "mixins": [
     "moundertweaks.mixins.json"
   ],
-
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
     "minecraft": "1.16.x"
-  },
-  "suggests": {
   }
 }
