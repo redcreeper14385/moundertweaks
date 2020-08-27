@@ -1,4 +1,4 @@
-package mounderfod.moundertweaks.util;
+package mounderfod.moundertweaks.util.config;
 
 import me.sargunvohra.mcmods.autoconfig1u.ConfigData;
 import me.sargunvohra.mcmods.autoconfig1u.annotation.Config;

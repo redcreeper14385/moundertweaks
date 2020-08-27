@@ -2,7 +2,7 @@ package mounderfod.moundertweaks;
 
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import me.sargunvohra.mcmods.autoconfig1u.serializer.JanksonConfigSerializer;
-import mounderfod.moundertweaks.util.MounderTweaksConfig;
+import mounderfod.moundertweaks.util.config.MounderTweaksConfig;
 import net.szum123321.tool_action_helper.api.ShovelPathHelper;
 
 import net.minecraft.block.Blocks;
