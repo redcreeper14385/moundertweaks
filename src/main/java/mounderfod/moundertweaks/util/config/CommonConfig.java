@@ -82,6 +82,14 @@ public class CommonConfig implements ConfigData {
 
     @RequiresRestart
     @Tooltip
+    public boolean compostableDirt = true;
+
+    @RequiresRestart
+    @Tooltip
+    public boolean compostableGrass = true;
+
+    @RequiresRestart
+    @Tooltip
     public boolean shovelGrinding = true;
 
     @RequiresRestart
