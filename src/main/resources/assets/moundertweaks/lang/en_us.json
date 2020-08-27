@@ -5,7 +5,7 @@
     "text.autoconfig.moundertweaks.option.common.compostablePoisonousPotatoes": "Poisonous potato composting",
     "text.autoconfig.moundertweaks.option.common.compostablePoisonousPotatoes.@Tooltip": "Enable composting of poisonous potatoes",
     "text.autoconfig.moundertweaks.option.common.shovelGrinding": "Shovel Grinding",
-    "text.autoconfig.moundertweaks.option.common.shovelGrinding.@Tooltip": "Enable grinding of cobblestone to gravel and gravel to sand by right-clicking with a shovel",
+    "text.autoconfig.moundertweaks.option.common.shovelGrinding.@Tooltip": "Enable grinding of cobblestone to gravel, gravel to sand and dirt to coarse dirt by right-clicking with a shovel",
     "text.autoconfig.moundertweaks.option.common.explosiveFuel": "Explosive fuel",
     "text.autoconfig.moundertweaks.option.common.explosiveFuel.@Tooltip": "Enable use of gunpowder as a furnace fuel",
     "text.autoconfig.moundertweaks.option.common.fieryFuel": "Fiery fuel",

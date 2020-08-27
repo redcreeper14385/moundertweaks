@@ -29,6 +29,7 @@ public class MounderTweaksMain implements ModInitializer {
         if (SharedConstants.CONFIG.common.shovelGrinding) {
             ShovelPathHelper.getInstance().addNewPathPair(Blocks.COBBLESTONE, Blocks.GRAVEL.getDefaultState());
             ShovelPathHelper.getInstance().addNewPathPair(Blocks.GRAVEL, Blocks.SAND.getDefaultState());
+            ShovelPathHelper.getInstance().addNewPathPair(Blocks.DIRT, Blocks.COARSE_DIRT.getDefaultState());
         }
 
         // Explosive Smelting
