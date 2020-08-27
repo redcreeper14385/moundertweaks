@@ -15,7 +15,7 @@ import net.fabricmc.api.Environment;
 
 @Environment(EnvType.CLIENT)
 @Mixin(PotionItem.class)
-public class MixinPotionItem {
+public class PotionItemMixin {
     @Inject(at = @At("HEAD"), method = "hasGlint", cancellable = true)
     public void cancelGlint(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
         if (!SharedConstants.CONFIG.client.potionGlint) {

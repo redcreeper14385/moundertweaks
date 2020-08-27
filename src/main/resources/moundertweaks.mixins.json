@@ -8,7 +8,7 @@
     "SheepEntityMixin"
   ],
   "client": [
-    "client.MixinPotionItem",
+    "client.PotionItemMixin",
     "client.OptionScreenMixin"
   ],
   "server": [],
