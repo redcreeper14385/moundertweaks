@@ -99,53 +99,67 @@ public class CommonConfig implements ConfigData {
     public SheepColorWeights sheepColorWeights = new SheepColorWeights();
 
     public static class SheepColorWeights {
-        @Tooltip
+        @RequiresRestart
         public boolean enabled = true;
 
+        @RequiresRestart
         @Tooltip
         public double white = 70.0;
 
+        @RequiresRestart
         @Tooltip
         public double black = 2.0;
 
-        @Tooltip
+        @RequiresRestart
+		@Tooltip
         public double magenta = 2.0;
 
-        @Tooltip
+        @RequiresRestart
+		@Tooltip
         public double lightBlue = 2.0;
 
+		@RequiresRestart
 		@Tooltip
         public double yellow = 2.0;
 
+		@RequiresRestart
 		@Tooltip
         public double lime = 2.0;
 
+		@RequiresRestart
 		@Tooltip
         public double pink = 2.0;
 
+		@RequiresRestart
 		@Tooltip
         public double gray = 2.0;
 
+		@RequiresRestart
 		@Tooltip
         public double cyan = 2.0;
 
+		@RequiresRestart
 		@Tooltip
         public double purple = 2.0;
 
-        @Tooltip
+        @RequiresRestart
+		@Tooltip
         public double blue = 2.0;
 
-        @Tooltip
+        @RequiresRestart
+		@Tooltip
         public double green = 2.0;
 
-        @Tooltip
+        @RequiresRestart
+		@Tooltip
         public double red = 2.0;
 
-        @Tooltip
+        @RequiresRestart
+		@Tooltip
         public double orange = 2.0;
 
-        @Tooltip
+        @RequiresRestart
+		@Tooltip
         public double brown = 2.0;
-
     }
 }
