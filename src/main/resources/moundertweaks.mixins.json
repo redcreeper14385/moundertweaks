@@ -8,8 +8,9 @@
     "SheepEntityMixin"
   ],
   "client": [
+    "client.OptionScreenMixin",
     "client.PotionItemMixin",
-    "client.OptionScreenMixin"
+    "client.BambooBlockMixin"
   ],
   "server": [],
   "injectors": {

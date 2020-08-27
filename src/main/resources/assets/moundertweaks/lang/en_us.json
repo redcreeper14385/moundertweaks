@@ -46,6 +46,8 @@
     "text.autoconfig.moundertweaks.option.common.sheepColorWeights.red.@Tooltip": "The weight for the color Red",
     "text.autoconfig.moundertweaks.option.common.sheepColorWeights.brown": "Brown",
     "text.autoconfig.moundertweaks.option.common.sheepColorWeights.brown.@Tooltip": "The weight for the color Brown",
+    "text.autoconfig.moundertweaks.option.client.optimizedBamboo": "Optimized Bamboo",
+    "text.autoconfig.moundertweaks.option.client.optimizedBamboo.@Tooltip": "Enable optimization of bamboo rendering",
     "text.autoconfig.moundertweaks.category.common": "Common",
     "text.autoconfig.moundertweaks.category.client": "Client",
     "mounderfod.moundertweaks.coordinates": "Coordinates: "

@@ -9,4 +9,7 @@ import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry.Gui.Tooltip;
 public class ClientConfig implements ConfigData {
     @Tooltip
     public boolean potionGlint = true;
+
+    @Tooltip
+    public boolean optimizedBamboo = true;
 }
