@@ -4,11 +4,13 @@
 Developed by mounderfod (aka redcreeper14385)
 ### Features
 #### Shovel Grinding
-Right-click with a shovel to turn cobblestone to gravel, and gravel to sand. <br>
+Right-click with a shovel to turn cobblestone to gravel, gravel to sand and dirt to coarse dirt. <br>
 #### Explosive and Fiery Fuel
 Gunpowder and Blaze Rods can be used as a furnace fuel, smelting six items each. Somewhat inspired by tfarecnim's hilarious Blast Processing mod (https://www.curseforge.com/minecraft/mc-mods/blast-processing)
 #### Useful Poisonous Potatoes
 Poisonous potatoes can now be composted, with a 10% chance to increase the compost level by one!
+#### Compostable Dirt And Grass
+Dirt and grass can be composted, with a 25% chance to increase the compost level.
 #### Coordinates Grabber (client-side)
 Just press F6 and your coordinates will appear in the chat! Unfortunately, for technical reasons this cannot be switched off, but you can always unbind the key.
 #### Lava Glass (off by default)
