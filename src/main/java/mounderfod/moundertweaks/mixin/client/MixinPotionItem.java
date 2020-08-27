@@ -1,6 +1,6 @@
 package mounderfod.moundertweaks.mixin.client;
 
-import mounderfod.moundertweaks.MounderTweaksMain;
+import mounderfod.moundertweaks.util.SharedConstants;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -18,7 +18,7 @@ import net.fabricmc.api.Environment;
 public class MixinPotionItem {
     @Inject(at = @At("HEAD"), method = "hasGlint", cancellable = true)
     public void cancelGlint(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
-        if (!MounderTweaksMain.CONFIG.client.potionGlint) {
+        if (!SharedConstants.CONFIG.client.potionGlint) {
             cir.setReturnValue(false);
         }
     }

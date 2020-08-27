@@ -4,7 +4,8 @@
   "package": "mounderfod.moundertweaks.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "FallingBlockMixin"
+    "FallingBlockMixin",
+    "SheepEntityMixin"
   ],
   "client": [
     "client.MixinPotionItem",
