@@ -9,10 +9,16 @@ Right-click with a shovel to turn cobblestone to gravel, and gravel to sand. <br
 Gunpowder and Blaze Rods can be used as a furnace fuel, smelting six items each. Somewhat inspired by tfarecnim's hilarious Blast Processing mod (https://www.curseforge.com/minecraft/mc-mods/blast-processing)
 #### Useful Poisonous Potatoes
 Poisonous potatoes can now be composted, with a 10% chance to increase the compost level by one!
-#### Coordinates Grabber
+#### Coordinates Grabber (client-side)
 Just press F6 and your coordinates will appear in the chat! Unfortunately, for technical reasons this cannot be switched off, but you can always unbind the key.
 #### Lava Glass (off by default)
 When lava touches sand, the sand turns to glass! Note: This is off by default because it can unintentionally mess with worldgen, i.e. lava pools spawning next to sand blocks. You can switch it on if you like it.
+#### Colourful Sheep
+Sheep of all colours can spawn naturally!
+#### No Potion Glint (off by default) (client-side)
+Potions no longer have the enchantment glint.
+#### Better Bamboo (client-side)
+Bamboo performance is improved by making some changes to ambient occlusion.
 #### Modularity
 Almost every feature of the mod can be disabled and customised to your will, with an easy to use JSON file!
 ### Downloads
