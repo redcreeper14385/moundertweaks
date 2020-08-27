@@ -27,7 +27,8 @@
     ]
   },
   "mixins": [
-    "moundertweaks.mixins.json"
+    "moundertweaks.mixins.json",
+    "moundertweaks.bonemeal.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.7.4",

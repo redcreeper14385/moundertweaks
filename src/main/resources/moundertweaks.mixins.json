@@ -5,8 +5,7 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "FallingBlockMixin",
-    "SheepEntityMixin",
-    "client.NetherWartBlockMixin"
+    "SheepEntityMixin"
   ],
   "client": [
     "client.BambooBlockMixin",

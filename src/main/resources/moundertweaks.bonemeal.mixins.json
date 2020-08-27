@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "mounderfod.moundertweaks.mixin.bonemeal",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "CactusBlockMixin",
+    "NetherWartBlockMixin",
+    "SugarCaneBlockMixin"
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "plugin": "mounderfod.moundertweaks.mixin.bonemeal.BonemealMixinPlugin"
+}

@@ -52,6 +52,13 @@
     "text.autoconfig.moundertweaks.option.common.sheepColorWeights.brown.@Tooltip": "The weight for the color Brown",
     "text.autoconfig.moundertweaks.option.client.optimizedBamboo": "Optimized Bamboo",
     "text.autoconfig.moundertweaks.option.client.optimizedBamboo.@Tooltip": "Enable optimization of bamboo rendering",
+    "text.autoconfig.moundertweaks.option.common.extraBonemeal": "Extra bonemeal uses",
+    "text.autoconfig.moundertweaks.option.common.extraBonemeal.enable": "Enable",
+    "text.autoconfig.moundertweaks.option.common.extraBonemeal.enable.@Tooltip": "Enable use of bonemeal on Cacti, Sugarcane and Nether wart",
+    "text.autoconfig.moundertweaks.option.common.extraBonemeal.cactiStages": "Enable",
+    "text.autoconfig.moundertweaks.option.common.extraBonemeal.cactiStages.@Tooltip": "The amount of stages bone meal should cause cacti to grow",
+    "text.autoconfig.moundertweaks.option.common.extraBonemeal.sugarCaneStages": "Enable",
+    "text.autoconfig.moundertweaks.option.common.extraBonemeal.sugarCaneStages.@Tooltip": "The amount of stages bone meal should cause sugar canes to grow",
     "text.autoconfig.moundertweaks.category.common": "Common",
     "text.autoconfig.moundertweaks.category.client": "Client",
     "mounderfod.moundertweaks.coordinates": "Coordinates: "

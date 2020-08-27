@@ -2,6 +2,8 @@ package mounderfod.moundertweaks.util.config;
 
 import me.sargunvohra.mcmods.autoconfig1u.ConfigData;
 import me.sargunvohra.mcmods.autoconfig1u.annotation.Config;
+import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry;
+import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry.BoundedDiscrete;
 import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry.Gui.CollapsibleObject;
 import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry.Gui.RequiresRestart;
 import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry.Gui.Tooltip;
@@ -105,6 +107,25 @@ public class CommonConfig implements ConfigData {
 
     @CollapsibleObject
     public SheepColorWeights sheepColorWeights = new SheepColorWeights();
+
+    @CollapsibleObject
+    public Bonemeal bonemeal = new Bonemeal();
+
+    public static class Bonemeal {
+        @RequiresRestart
+        @Tooltip
+        public boolean enable = true;
+
+        @RequiresRestart
+        @Tooltip
+        @BoundedDiscrete(max = 16L)
+        public long cactiStages = 8;
+
+        @RequiresRestart
+        @Tooltip
+        @BoundedDiscrete(max = 16L)
+        public long sugarCaneStages = 8;
+    }
 
     public static class SheepColorWeights {
         @RequiresRestart

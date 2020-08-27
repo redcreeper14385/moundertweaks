@@ -1,6 +1,6 @@
 package mounderfod.moundertweaks.mixin;
 
-import mounderfod.moundertweaks.util.SharedConstants;
+import mounderfod.moundertweaks.MounderTweaksMain;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -25,7 +25,7 @@ public class FallingBlockMixin extends Block {
     @Inject(at = @At("TAIL"), method = "getStateForNeighborUpdate")
     public void createGlass(BlockState state, Direction direction, BlockState newState, WorldAccess world, BlockPos pos, BlockPos posFrom, CallbackInfoReturnable<BlockState> cir) {
 	    if ((FallingBlock) (Object) this instanceof SandBlock){
-            if (SharedConstants.CONFIG.common.lavaSand && newState.getBlock() == Blocks.LAVA) {
+            if (MounderTweaksMain.CONFIG.common.lavaSand && newState.getBlock() == Blocks.LAVA) {
                 world.setBlockState(pos, Blocks.GLASS.getDefaultState(), 3);
             }
         }
