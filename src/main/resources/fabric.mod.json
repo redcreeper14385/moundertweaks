@@ -3,7 +3,7 @@
   "id": "moundertweaks",
   "version": "${version}",
   "name": "MounderTweaks",
-  "description": "A bunch of useful tweaks!",
+  "description": "A bunch of vanilla-style tweaks and changes to Minecraft 1.16.2, with the help of the Fabric Loader.",
   "authors": [
     "mounderfod"
   ],

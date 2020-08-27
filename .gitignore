@@ -1,6 +1,9 @@
 # Idea
 .idea/
 
+# VSCode (tiny_potato)
+.vscode/
+
 # Garbage
 .DS_Store
 
