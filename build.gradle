@@ -1,6 +1,7 @@
 plugins {
 	id 'fabric-loom' version '0.4-SNAPSHOT'
 	id 'maven-publish'
+	id 'com.matthewprenger.cursegradle' version '1.4.0'
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_8
@@ -9,6 +10,16 @@ targetCompatibility = JavaVersion.VERSION_1_8
 archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
+
+def getProjectStatus() {
+	if (project.mod_version.contains("pre")) {
+		return "beta"
+	}
+	else if (project.mod_version.contains("alpha")) {
+		return "alpha"
+	}
+	return "release"
+}
 
 repositories{
 	maven {
@@ -96,5 +107,27 @@ publishing {
 	repositories {
 		// uncomment to publish to the local maven
 		// mavenLocal()
+	}
+}
+
+curseforge {
+	if (project.hasProperty('curse_api_key')) {
+		apiKey = project.getProperty('curse_api_key')
+	}
+	project {
+		id = '404512'
+		changelog = 'A changelog can be found at https://github.com/redcreeper14385/moundertweaks/commits'
+		releaseType = getProjectStatus()
+		addGameVersion "${project.minecraft_version}"
+		addGameVersion 'Fabric'
+		mainArtifact(file("${project.buildDir}/libs/${archivesBaseName}-${version}.jar")) {
+			displayName = "[${project.minecraft_version}] MounderTweaks ${version}"
+		}
+		afterEvaluate {
+			uploadTask.dependsOn("remapJar")
+		}
+	}
+	options {
+		forgeGradleIntegration = false
 	}
 }
