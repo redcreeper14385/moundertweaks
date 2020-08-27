@@ -1,8 +1,10 @@
 package mounderfod.moundertweaks;
 
+import com.google.common.base.MoreObjects;
 import org.lwjgl.glfw.GLFW;
 
 import net.minecraft.client.options.KeyBinding;
+import net.minecraft.client.resource.language.I18n;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.text.LiteralText;
 
@@ -17,16 +19,24 @@ public class MounderTweaksClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         // Coords Keybind
-        KeyBinding coordsBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.moundertweaks.getcoords", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_F6, "key.category.moundertweaks"));
+        KeyBinding coordsBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.moundertweaks.getcoords", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_F7, "key.category.moundertweaks"));
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (coordsBinding.wasPressed()) {
                 if (client.player == null) {
                     return;
                 }
-                String coordinates = client.player
-                        .getBlockPos()
+                String coordinates = MoreObjects.toStringHelper(I18n.translate("mounderfod.moundertweaks.coordinates"))
+                        .add("x", client.player
+                                .getBlockPos()
+                                .getX())
+                        .add("y", client.player
+                                .getBlockPos()
+                                .getY()).add("z", client.player
+                                .getBlockPos()
+                                .getZ())
                         .toString()
-                        .replace("class_2338", "");
+                        .replace("{", "")
+                        .replace("}", "");
                 client.player.sendMessage(new LiteralText(coordinates), false);
             }
         });

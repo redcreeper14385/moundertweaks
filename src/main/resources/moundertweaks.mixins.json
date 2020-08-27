@@ -4,10 +4,13 @@
   "package": "mounderfod.moundertweaks.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "FallingBlockMixin"
+    "FallingBlockMixin",
+    "SheepEntityMixin"
   ],
   "client": [
-    "OptionScreenMixin"
+    "client.OptionScreenMixin",
+    "client.PotionItemMixin",
+    "client.BambooBlockMixin"
   ],
   "server": [],
   "injectors": {
