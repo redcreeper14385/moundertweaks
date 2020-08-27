@@ -22,3 +22,4 @@ bin/
 .classpath
 .project
 logs/
+.vscode/
