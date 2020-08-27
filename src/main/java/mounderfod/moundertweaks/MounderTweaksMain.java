@@ -25,6 +25,15 @@ public class MounderTweaksMain implements ModInitializer {
             CompostingChanceRegistry.INSTANCE.add(Items.POISONOUS_POTATO, 0.1f);
         }
 
+        // Compostable Dirt and Grass Blocks
+        if (SharedConstants.CONFIG.common.compostableDirt) {
+            CompostingChanceRegistry.INSTANCE.add(Items.DIRT, 0.25f);
+        }
+
+        if (SharedConstants.CONFIG.common.compostableGrass) {
+            CompostingChanceRegistry.INSTANCE.add(Items.GRASS_BLOCK, 0.25f);
+        }
+
         // Shovel Grinding
         if (SharedConstants.CONFIG.common.shovelGrinding) {
             ShovelPathHelper.getInstance().addNewPathPair(Blocks.COBBLESTONE, Blocks.GRAVEL.getDefaultState());
