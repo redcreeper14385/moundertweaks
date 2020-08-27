@@ -5,12 +5,13 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "FallingBlockMixin",
-    "SheepEntityMixin"
+    "SheepEntityMixin",
+    "client.NetherWartBlockMixin"
   ],
   "client": [
+    "client.BambooBlockMixin",
     "client.OptionScreenMixin",
-    "client.PotionItemMixin",
-    "client.BambooBlockMixin"
+    "client.PotionItemMixin"
   ],
   "server": [],
   "injectors": {
