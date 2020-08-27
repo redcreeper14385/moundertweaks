@@ -26,9 +26,10 @@ public class MounderTweaksClient implements ClientModInitializer {
                 String coordinates = client.player
                         .getBlockPos()
                         .toString()
-                        .replace("BlockPos", "Coordinates: ");
+                        .replace("class_2338", "");
                 client.player.sendMessage(new LiteralText(coordinates), false);
             }
         });
     }
+
 }

@@ -11,5 +11,6 @@
     "text.autoconfig.moundertweaks.option.fieryFuel.@Tooltip": "Enable use of blaze powder as a furnace fuel",
     "text.autoconfig.moundertweaks.option.lavaSand": "Glass generators",
     "text.autoconfig.moundertweaks.option.lavaSand.@Tooltip": "Enable conversion of Sand to Glass when touching lava",
-    "gui.moundertweaks.config": "MounderTweaks Configuration"
+    "gui.moundertweaks.config": "MounderTweaks Configuration",
+    "text.autoconfig.moundertweaks.title": "MounderTweaks Configuration"
 }
