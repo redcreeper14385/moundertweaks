@@ -13,5 +13,6 @@
     "text.autoconfig.moundertweaks.option.common.lavaSand": "Glass generators",
     "text.autoconfig.moundertweaks.option.common.lavaSand.@Tooltip": "Enable conversion of Sand to Glass when touching lava",
     "text.autoconfig.moundertweaks.option.client.potionGlint": "Potion Glint",
-    "text.autoconfig.moundertweaks.option.client.potionGlint.@Tooltip": "Enable the enchantment glint rendering on potions"
+    "text.autoconfig.moundertweaks.option.client.potionGlint.@Tooltip": "Enable the enchantment glint rendering on potions",
+    "mounderfod.moundertweaks.coordinates": "Coordinates: "
 }

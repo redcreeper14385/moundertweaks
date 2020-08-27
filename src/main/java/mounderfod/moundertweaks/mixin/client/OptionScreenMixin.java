@@ -34,7 +34,7 @@ public class OptionScreenMixin extends Screen {
     @Inject(at = @At("RETURN"), method = "init")
     public void drawConfigScreen(CallbackInfo ci) {
         // Only load if modmenu is not present
-        if (!FabricLoader.getInstance().isModLoaded("modmenu")) {
+        if (!FabricLoader.getInstance().isModLoaded("modmenu") && this.client != null) {
             this.addButton(new ButtonWidget(this.width / 2 - 100, this.height / 6 + 192, 200, 20, new TranslatableText("text.autoconfig.moundertweaks.title"), (buttonWidget) -> {
                 this.client.openScreen(AutoConfig.getConfigScreen(MounderTweaksConfig.class, this.parent).get());
             }));
