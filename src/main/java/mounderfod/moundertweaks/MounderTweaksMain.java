@@ -13,11 +13,12 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 
-public class MounderTweaksMain implements ModInitializer{
+public class MounderTweaksMain implements ModInitializer {
 
     @Override
     public void onInitialize() {
         AutoConfig.register(MounderTweaksConfig.class, JanksonConfigSerializer::new);
+        SharedConstants.initialize();
 
         // Compostable Poisonous Potatoes
         if (SharedConstants.CONFIG.common.compostablePoisonousPotatoes) {

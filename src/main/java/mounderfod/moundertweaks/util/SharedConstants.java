@@ -10,8 +10,12 @@ import net.minecraft.util.DyeColor;
 
 public final class SharedConstants {
     public static final Map<DyeColor, Double> DYE_WEIGHTS = new EnumMap<>(DyeColor.class);
-    public static final MounderTweaksConfig CONFIG = AutoConfig.getConfigHolder(MounderTweaksConfig.class).getConfig();
+    public static MounderTweaksConfig CONFIG;
 
     private SharedConstants() {
+    }
+
+    public static void initialize() {
+        CONFIG = AutoConfig.getConfigHolder(MounderTweaksConfig.class).getConfig();
     }
 }

@@ -13,6 +13,51 @@ import net.minecraft.util.DyeColor;
 public class CommonConfig implements ConfigData {
     @Override
     public void validatePostLoad() {
+        if (this.sheepColorWeights.white < 0.0) {
+            this.sheepColorWeights.white = 0.0;
+        }
+        if (this.sheepColorWeights.orange < 0.0) {
+            this.sheepColorWeights.orange = 0.0;
+        }
+        if (this.sheepColorWeights.magenta < 0.0) {
+            this.sheepColorWeights.magenta = 0.0;
+        }
+        if (this.sheepColorWeights.lightBlue < 0.0) {
+            this.sheepColorWeights.lightBlue = 0.0;
+        }
+        if (this.sheepColorWeights.yellow < 0.0) {
+            this.sheepColorWeights.yellow = 0.0;
+        }
+        if (this.sheepColorWeights.lime < 0.0) {
+            this.sheepColorWeights.lime = 0.0;
+        }
+        if (this.sheepColorWeights.pink < 0.0) {
+            this.sheepColorWeights.pink = 0.0;
+        }
+        if (this.sheepColorWeights.gray < 0.0) {
+            this.sheepColorWeights.gray = 0.0;
+        }
+        if (this.sheepColorWeights.cyan < 0.0) {
+            this.sheepColorWeights.cyan = 0.0;
+        }
+        if (this.sheepColorWeights.purple < 0.0) {
+            this.sheepColorWeights.purple = 0.0;
+        }
+        if (this.sheepColorWeights.blue < 0.0) {
+            this.sheepColorWeights.blue = 0.0;
+        }
+        if (this.sheepColorWeights.brown < 0.0) {
+            this.sheepColorWeights.brown = 0.0;
+        }
+        if (this.sheepColorWeights.green < 0.0) {
+            this.sheepColorWeights.green = 0.0;
+        }
+        if (this.sheepColorWeights.red < 0.0) {
+            this.sheepColorWeights.red = 0.0;
+        }
+        if (this.sheepColorWeights.black < 0.0) {
+            this.sheepColorWeights.black = 0.0;
+        }
         SharedConstants.DYE_WEIGHTS.clear();
         SharedConstants.DYE_WEIGHTS.putIfAbsent(DyeColor.WHITE, this.sheepColorWeights.white);
         SharedConstants.DYE_WEIGHTS.putIfAbsent(DyeColor.ORANGE, this.sheepColorWeights.orange);
@@ -61,10 +106,12 @@ public class CommonConfig implements ConfigData {
         public double white = 70.0;
 
         @Tooltip
-        public double orange = 2.0;
+        public double black = 2.0;
 
         @Tooltip
         public double magenta = 2.0;
+
+        @Tooltip
         public double lightBlue = 2.0;
 
 		@Tooltip
@@ -89,15 +136,16 @@ public class CommonConfig implements ConfigData {
         public double blue = 2.0;
 
         @Tooltip
-        public double brown = 2.0;
-
-        @Tooltip
         public double green = 2.0;
 
         @Tooltip
         public double red = 2.0;
 
         @Tooltip
-        public double black = 2.0;
+        public double orange = 2.0;
+
+        @Tooltip
+        public double brown = 2.0;
+
     }
 }
