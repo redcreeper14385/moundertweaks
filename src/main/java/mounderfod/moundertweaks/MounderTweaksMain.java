@@ -56,8 +56,8 @@ public class MounderTweaksMain implements ModInitializer {
             if (MounderTweaksMain.CONFIG.common.lampToggle) {
                 if (playerEntity.getStackInHand(hand).getItem() == Items.REDSTONE_TORCH) {
                     world.setBlockState(blockHitResult.getBlockPos(), world.getBlockState(blockHitResult.getBlockPos()).getBlock().getDefaultState().with(RedstoneLampBlock.LIT, !world.getBlockState(blockHitResult.getBlockPos()).get(RedstoneLampBlock.LIT)));
+                    return ActionResult.SUCCESS;
                 }
-                return ActionResult.SUCCESS;
             }
             return ActionResult.PASS;
         }));
