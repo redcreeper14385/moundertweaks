@@ -19,8 +19,8 @@ Sheep of all colours can spawn naturally!
 Potions no longer have the enchantment glint.
 #### Better Bamboo (client-side)
 Bamboo performance is improved by making some changes to ambient occlusion.
-#### Modularity
-Almost every feature of the mod can be disabled and customised to your will, with an easy to use JSON file!
+#### Configuration
+Almost every feature of the mod can be disabled and customised to your will, with an easy to use JSON file! You can also access the config screen from Mod menu. 
 ### Downloads
 When the file is approved, you'll be able to get the latest download on CurseForge: https://www.curseforge.com/minecraft/mc-mods/moundertweaks <br>
 Until then, or if you prefer GitHub, just click "Releases" on the right-hand side of the page, and from there you can download the latest JAR.
