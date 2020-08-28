@@ -64,8 +64,7 @@ public class MounderTweaksMain implements ModInitializer {
     }
 
     static {
-        AutoConfig.register(MounderTweaksConfig.class, JanksonConfigSerializer::new);
-        CONFIG = AutoConfig.getConfigHolder(MounderTweaksConfig.class).getConfig();
+        CONFIG = AutoConfig.register(MounderTweaksConfig.class, JanksonConfigSerializer::new).getConfig();
     }
 }
 
