@@ -1,6 +1,5 @@
 package mounderfod.moundertweaks.mixin.bonemeal;
 
-import mounderfod.moundertweaks.MounderTweaksMain;
 import mounderfod.moundertweaks.util.GrowableHelper;
 
 import java.util.Random;
@@ -41,6 +40,6 @@ public class CactusBlockMixin extends Block implements Fertilizable {
 
     @Override
     public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
-        GrowableHelper.grow(world, this, pos, AGE, MounderTweaksMain.CONFIG.common.bonemeal.sugarCaneStages);
+        GrowableHelper.grow(world, this, pos);
     }
 }

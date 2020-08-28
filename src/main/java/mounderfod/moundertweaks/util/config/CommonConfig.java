@@ -119,15 +119,13 @@ public class CommonConfig implements ConfigData {
         @Tooltip
         public boolean enable = true;
 
-        @RequiresRestart
         @Tooltip
-        @BoundedDiscrete(max = 16L)
-        public long cactiStages = 8;
+        @BoundedDiscrete(max = 64L)
+        public long cactiChance = 6;
 
-        @RequiresRestart
         @Tooltip
-        @BoundedDiscrete(max = 16L)
-        public long sugarCaneStages = 8;
+        @BoundedDiscrete(max = 64L)
+        public long sugarCaneChance = 6;
     }
 
     public static class SheepColorWeights {

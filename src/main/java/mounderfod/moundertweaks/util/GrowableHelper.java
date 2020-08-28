@@ -1,8 +1,11 @@
 package mounderfod.moundertweaks.util;
 
+import mounderfod.moundertweaks.MounderTweaksMain;
+
+import java.util.Random;
+
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.state.property.IntProperty;
+import net.minecraft.block.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -10,33 +13,14 @@ public final class GrowableHelper {
     private GrowableHelper() {
     }
 
-    public static void grow(World world, Block block, BlockPos pos, IntProperty ageProperty, long stages) {
-        BlockPos tempPos;
-        int i = 0;
-        while (world.getBlockState((tempPos = pos.down())).getBlock() == block) {
-            pos = tempPos;
-
-            if (++i > 1) {
-                return;
-            }
+    public static void grow(World world, Block block, BlockPos pos) {
+        if (world.getBlockState(pos.up()).getBlock() == block) {
+            grow(world, block, pos.up());
         }
-        i = 0;
-        while (world.getBlockState((tempPos = pos.up())).getBlock() == block) {
-            pos = tempPos;
-            if (++i > 1) {
-                return;
-            }
+        if (block == Blocks.CACTUS && new Random().nextInt(64) <= Math.toIntExact(MounderTweaksMain.CONFIG.common.bonemeal.sugarCaneChance)) {
+            world.setBlockState(pos.up(), block.getDefaultState());
+        } else if (block == Blocks.CACTUS && new Random().nextInt(64) <= Math.toIntExact(MounderTweaksMain.CONFIG.common.bonemeal.cactiChance)) {
+            world.setBlockState(pos.up(), block.getDefaultState());
         }
-        BlockState state = world.getBlockState(pos);
-        final int originalStage = state.get(ageProperty);
-        int newStage = Math.toIntExact(originalStage + stages - 1);
-        if (newStage > 15) {
-            newStage = 15;
-        }
-        if (originalStage == newStage) {
-            return;
-        }
-        state = state.with(ageProperty, newStage);
-        world.setBlockState(pos, state, 4);
     }
 }
