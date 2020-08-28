@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/Jlcwp07.png" width=100> <br>
+![Logo](https://i.imgur.com/Jlcwp07.png)  
 # MounderTweaks
 ### A bunch of vanilla-style tweaks and changes to Minecraft 1.16.2, with the help of the Fabric Loader.
 Developed by mounderfod (aka redcreeper14385)
