@@ -1,5 +1,6 @@
 package mounderfod.moundertweaks.mixin;
 
+import mounderfod.moundertweaks.MounderTweaksMain;
 import mounderfod.moundertweaks.util.SharedConstants;
 
 import java.util.Map;
@@ -32,7 +33,7 @@ public abstract class SheepEntityMixin extends AnimalEntity {
 
     @Inject(at = @At("TAIL"), method = "initialize")
     public void randomizeColor(ServerWorldAccess serverWorldAccess, LocalDifficulty difficulty, SpawnReason spawnReason, EntityData entityData, CompoundTag entityTag, CallbackInfoReturnable<EntityData> cir) {
-        if (SharedConstants.CONFIG.common.sheepColorWeights.enabled) {
+        if (MounderTweaksMain.CONFIG.common.sheepColorWeights.enabled) {
             double result = SharedConstants.DYE_WEIGHTS.values().stream().mapToDouble(d -> d).sum() * serverWorldAccess.getRandom().nextDouble();
             double total = 0.0D;
             for (Map.Entry<DyeColor, Double> weight : SharedConstants.DYE_WEIGHTS.entrySet()) {

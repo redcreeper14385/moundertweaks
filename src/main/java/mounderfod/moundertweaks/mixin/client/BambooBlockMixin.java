@@ -1,6 +1,6 @@
 package mounderfod.moundertweaks.mixin.client;
 
-import mounderfod.moundertweaks.util.SharedConstants;
+import mounderfod.moundertweaks.MounderTweaksMain;
 
 import org.spongepowered.asm.mixin.Mixin;
 
@@ -22,7 +22,7 @@ public class BambooBlockMixin extends Block {
 
     @Override
     public float getAmbientOcclusionLightLevel(BlockState state, BlockView world, BlockPos pos) {
-        if (SharedConstants.CONFIG.client.optimizedBamboo) {
+        if (MounderTweaksMain.CONFIG.client.optimizedBamboo) {
             return 1.0F;
         }
         return super.getAmbientOcclusionLightLevel(state, world, pos);

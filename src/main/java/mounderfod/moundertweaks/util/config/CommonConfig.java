@@ -2,6 +2,7 @@ package mounderfod.moundertweaks.util.config;
 
 import me.sargunvohra.mcmods.autoconfig1u.ConfigData;
 import me.sargunvohra.mcmods.autoconfig1u.annotation.Config;
+import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry.BoundedDiscrete;
 import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry.Gui.CollapsibleObject;
 import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry.Gui.RequiresRestart;
 import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry.Gui.Tooltip;
@@ -59,21 +60,25 @@ public class CommonConfig implements ConfigData {
             this.sheepColorWeights.black = 0.0;
         }
         SharedConstants.DYE_WEIGHTS.clear();
-        SharedConstants.DYE_WEIGHTS.putIfAbsent(DyeColor.WHITE, this.sheepColorWeights.white);
-        SharedConstants.DYE_WEIGHTS.putIfAbsent(DyeColor.ORANGE, this.sheepColorWeights.orange);
-        SharedConstants.DYE_WEIGHTS.putIfAbsent(DyeColor.MAGENTA, this.sheepColorWeights.magenta);
-        SharedConstants.DYE_WEIGHTS.putIfAbsent(DyeColor.LIGHT_BLUE, this.sheepColorWeights.lightBlue);
-        SharedConstants.DYE_WEIGHTS.putIfAbsent(DyeColor.YELLOW, this.sheepColorWeights.yellow);
-        SharedConstants.DYE_WEIGHTS.putIfAbsent(DyeColor.LIME, this.sheepColorWeights.lime);
-        SharedConstants.DYE_WEIGHTS.putIfAbsent(DyeColor.PINK, this.sheepColorWeights.pink);
-        SharedConstants.DYE_WEIGHTS.putIfAbsent(DyeColor.GRAY, this.sheepColorWeights.gray);
-        SharedConstants.DYE_WEIGHTS.putIfAbsent(DyeColor.CYAN, this.sheepColorWeights.cyan);
-        SharedConstants.DYE_WEIGHTS.putIfAbsent(DyeColor.PURPLE, this.sheepColorWeights.purple);
-        SharedConstants.DYE_WEIGHTS.putIfAbsent(DyeColor.BLUE, this.sheepColorWeights.blue);
-        SharedConstants.DYE_WEIGHTS.putIfAbsent(DyeColor.BROWN, this.sheepColorWeights.brown);
-        SharedConstants.DYE_WEIGHTS.putIfAbsent(DyeColor.GREEN, this.sheepColorWeights.green);
-        SharedConstants.DYE_WEIGHTS.putIfAbsent(DyeColor.RED, this.sheepColorWeights.red);
-        SharedConstants.DYE_WEIGHTS.putIfAbsent(DyeColor.BLACK, this.sheepColorWeights.black);
+        this.acceptDye(DyeColor.WHITE, this.sheepColorWeights.white);
+        this.acceptDye(DyeColor.ORANGE, this.sheepColorWeights.orange);
+        this.acceptDye(DyeColor.MAGENTA, this.sheepColorWeights.magenta);
+        this.acceptDye(DyeColor.LIGHT_BLUE, this.sheepColorWeights.lightBlue);
+        this.acceptDye(DyeColor.YELLOW, this.sheepColorWeights.yellow);
+        this.acceptDye(DyeColor.LIME, this.sheepColorWeights.lime);
+        this.acceptDye(DyeColor.PINK, this.sheepColorWeights.pink);
+        this.acceptDye(DyeColor.GRAY, this.sheepColorWeights.gray);
+        this.acceptDye(DyeColor.CYAN, this.sheepColorWeights.cyan);
+        this.acceptDye(DyeColor.PURPLE, this.sheepColorWeights.purple);
+        this.acceptDye(DyeColor.BLUE, this.sheepColorWeights.blue);
+        this.acceptDye(DyeColor.BROWN, this.sheepColorWeights.brown);
+        this.acceptDye(DyeColor.GREEN, this.sheepColorWeights.green);
+        this.acceptDye(DyeColor.RED, this.sheepColorWeights.red);
+        this.acceptDye(DyeColor.BLACK, this.sheepColorWeights.black);
+    }
+    
+    public void acceptDye(DyeColor color, Double weight) {
+        SharedConstants.DYE_CONSUMER.accept(color, weight);
     }
 
     @RequiresRestart
@@ -106,6 +111,22 @@ public class CommonConfig implements ConfigData {
     @CollapsibleObject
     public SheepColorWeights sheepColorWeights = new SheepColorWeights();
 
+    @CollapsibleObject
+    public Bonemeal bonemeal = new Bonemeal();
+
+    public static class Bonemeal {
+        @Tooltip
+        public boolean enable = true;
+
+        @Tooltip
+        @BoundedDiscrete(max = 128L)
+        public long cactiChance = 10;
+
+        @Tooltip
+        @BoundedDiscrete(max = 128L)
+        public long sugarCaneChance = 10;
+    }
+
     public static class SheepColorWeights {
         @RequiresRestart
         public boolean enabled = true;
@@ -119,55 +140,55 @@ public class CommonConfig implements ConfigData {
         public double black = 2.0;
 
         @RequiresRestart
-		@Tooltip
+        @Tooltip
         public double magenta = 2.0;
 
         @RequiresRestart
-		@Tooltip
+        @Tooltip
         public double lightBlue = 2.0;
 
-		@RequiresRestart
-		@Tooltip
+        @RequiresRestart
+        @Tooltip
         public double yellow = 2.0;
 
-		@RequiresRestart
-		@Tooltip
+        @RequiresRestart
+        @Tooltip
         public double lime = 2.0;
 
-		@RequiresRestart
-		@Tooltip
+        @RequiresRestart
+        @Tooltip
         public double pink = 2.0;
 
-		@RequiresRestart
-		@Tooltip
+        @RequiresRestart
+        @Tooltip
         public double gray = 2.0;
 
-		@RequiresRestart
-		@Tooltip
+        @RequiresRestart
+        @Tooltip
         public double cyan = 2.0;
 
-		@RequiresRestart
-		@Tooltip
+        @RequiresRestart
+        @Tooltip
         public double purple = 2.0;
 
         @RequiresRestart
-		@Tooltip
+        @Tooltip
         public double blue = 2.0;
 
         @RequiresRestart
-		@Tooltip
+        @Tooltip
         public double green = 2.0;
 
         @RequiresRestart
-		@Tooltip
+        @Tooltip
         public double red = 2.0;
 
         @RequiresRestart
-		@Tooltip
+        @Tooltip
         public double orange = 2.0;
 
         @RequiresRestart
-		@Tooltip
+        @Tooltip
         public double brown = 2.0;
     }
 }
