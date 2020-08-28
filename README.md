@@ -21,6 +21,8 @@ Sheep of all colours can spawn naturally!
 Potions no longer have the enchantment glint.
 #### Better Bamboo (client-side)
 Bamboo performance is improved by making some changes to ambient occlusion.
+#### Bonemealable Cactus, Sugarcane and Nether Wart
+Cacti, Sugarcane and Nether wart can be bonemealed, with a configurable chance to grow per bonemeal.
 #### Configuration
 Almost every feature of the mod can be disabled and customised to your will, with an easy to use JSON file! You can also access the config screen from Mod menu. 
 ### Downloads
