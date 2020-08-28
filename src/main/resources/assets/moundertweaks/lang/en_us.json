@@ -53,7 +53,7 @@
     "text.autoconfig.moundertweaks.option.client.optimizedBamboo": "Optimized Bamboo",
     "text.autoconfig.moundertweaks.option.client.optimizedBamboo.@Tooltip": "Enable optimization of bamboo rendering",
     "text.autoconfig.moundertweaks.option.common.bonemeal": "Extra bonemeal uses",
-    "text.autoconfig.moundertweaks.option.common.bonemeal.enable": "Enable",
+    "text.autoconfig.moundertweaks.option.common.bonemeal.enable": "Enable extra bonemeal uses. Requires a restart. ",
     "text.autoconfig.moundertweaks.option.common.bonemeal.enable.@Tooltip": "Enable use of bonemeal on Cacti, Sugarcane and Nether wart",
     "text.autoconfig.moundertweaks.option.common.bonemeal.cactiChance": "Cacti chance",
     "text.autoconfig.moundertweaks.option.common.bonemeal.cactiChance.@Tooltip": "The chance (out of 64) that a cactus will grow when bonemeal is applied on it",

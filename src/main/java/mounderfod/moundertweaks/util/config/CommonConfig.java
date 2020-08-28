@@ -115,17 +115,16 @@ public class CommonConfig implements ConfigData {
     public Bonemeal bonemeal = new Bonemeal();
 
     public static class Bonemeal {
-        @RequiresRestart
         @Tooltip
         public boolean enable = true;
 
         @Tooltip
-        @BoundedDiscrete(max = 64L)
-        public long cactiChance = 6;
+        @BoundedDiscrete(max = 128L)
+        public long cactiChance = 10;
 
         @Tooltip
-        @BoundedDiscrete(max = 64L)
-        public long sugarCaneChance = 6;
+        @BoundedDiscrete(max = 128L)
+        public long sugarCaneChance = 10;
     }
 
     public static class SheepColorWeights {
