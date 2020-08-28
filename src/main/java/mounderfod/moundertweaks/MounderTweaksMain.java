@@ -15,6 +15,7 @@ import net.fabricmc.fabric.api.registry.FuelRegistry;
 public class MounderTweaksMain implements ModInitializer {
 
     public static final MounderTweaksConfig CONFIG;
+
     @Override
     public void onInitialize() {
         // Compostable Poisonous Potatoes

@@ -18,13 +18,13 @@ import net.minecraft.world.WorldAccess;
 
 @Mixin(FallingBlock.class)
 public class FallingBlockMixin extends Block {
-	public FallingBlockMixin(Settings settings) {
-		super(settings);
+    public FallingBlockMixin(Settings settings) {
+        super(settings);
     }
 
     @Inject(at = @At("TAIL"), method = "getStateForNeighborUpdate")
     public void createGlass(BlockState state, Direction direction, BlockState newState, WorldAccess world, BlockPos pos, BlockPos posFrom, CallbackInfoReturnable<BlockState> cir) {
-	    if ((FallingBlock) (Object) this instanceof SandBlock){
+        if ((FallingBlock) (Object) this instanceof SandBlock) {
             if (MounderTweaksMain.CONFIG.common.lavaSand && newState.getBlock() == Blocks.LAVA) {
                 world.setBlockState(pos, Blocks.GLASS.getDefaultState(), 3);
             }

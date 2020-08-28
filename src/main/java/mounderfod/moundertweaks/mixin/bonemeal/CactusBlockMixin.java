@@ -31,12 +31,12 @@ public class CactusBlockMixin extends Block implements Fertilizable {
 
     @Override
     public boolean isFertilizable(BlockView world, BlockPos pos, BlockState state, boolean isClient) {
-        return false;
+        return true;
     }
 
     @Override
     public boolean canGrow(World world, Random random, BlockPos pos, BlockState state) {
-        return false;
+        return true;
     }
 
     @Override

@@ -13,27 +13,27 @@ public final class GrowableHelper {
     public static void grow(World world, Block block, BlockPos pos, IntProperty ageProperty, long stages) {
         BlockPos tempPos;
         int i = 0;
-        while(world.getBlockState((tempPos = pos.down())).getBlock() == block) {
+        while (world.getBlockState((tempPos = pos.down())).getBlock() == block) {
             pos = tempPos;
 
-            if(++i > 1) {
+            if (++i > 1) {
                 return;
             }
         }
         i = 0;
-        while(world.getBlockState((tempPos = pos.up())).getBlock() == block) {
+        while (world.getBlockState((tempPos = pos.up())).getBlock() == block) {
             pos = tempPos;
-            if(++i > 1) {
+            if (++i > 1) {
                 return;
             }
         }
         BlockState state = world.getBlockState(pos);
         final int originalStage = state.get(ageProperty);
         int newStage = Math.toIntExact(originalStage + stages - 1);
-        if(newStage > 15) {
+        if (newStage > 15) {
             newStage = 15;
         }
-        if(originalStage == newStage) {
+        if (originalStage == newStage) {
             return;
         }
         state = state.with(ageProperty, newStage);
