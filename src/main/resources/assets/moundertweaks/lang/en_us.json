@@ -65,5 +65,7 @@
     "text.autoconfig.moundertweaks.option.common.bonemeal.sugarCaneChance.@Tooltip": "The chance (out of 64) that a sugarcane will grow when bonemeal is applied on it",
     "text.autoconfig.moundertweaks.category.common": "Common",
     "text.autoconfig.moundertweaks.category.client": "Client",
-    "mounderfod.moundertweaks.coordinates": "Coordinates: "
+    "mounderfod.moundertweaks.coordinates": "Coordinates: ",
+    "text.autoconfig.moundertweaks.option.common.lampToggle": "Toggleable Redstone Lamps",
+    "text.autoconfig.moundertweaks.option.common.lampToggle.@Tooltip": "Enable toggling of redstone lamps with a redstone torch"
 }

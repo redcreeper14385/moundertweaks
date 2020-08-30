@@ -6,9 +6,12 @@ import mounderfod.moundertweaks.util.config.MounderTweaksConfig;
 import net.szum123321.tool_action_helper.api.ShovelPathHelper;
 
 import net.minecraft.block.Blocks;
+import net.minecraft.block.RedstoneLampBlock;
 import net.minecraft.item.Items;
+import net.minecraft.util.ActionResult;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 
@@ -48,11 +51,20 @@ public class MounderTweaksMain implements ModInitializer {
         if (CONFIG.common.fieryFuel) {
             FuelRegistry.INSTANCE.add(Items.BLAZE_POWDER, 1200);
         }
+
+        UseBlockCallback.EVENT.register(((playerEntity, world, hand, blockHitResult) -> {
+            if (MounderTweaksMain.CONFIG.common.lampToggle) {
+                if (playerEntity.getStackInHand(hand).getItem() == Items.REDSTONE_TORCH) {
+                    world.setBlockState(blockHitResult.getBlockPos(), world.getBlockState(blockHitResult.getBlockPos()).getBlock().getDefaultState().with(RedstoneLampBlock.LIT, !world.getBlockState(blockHitResult.getBlockPos()).get(RedstoneLampBlock.LIT)));
+                    return ActionResult.SUCCESS;
+                }
+            }
+            return ActionResult.PASS;
+        }));
     }
 
     static {
-        AutoConfig.register(MounderTweaksConfig.class, JanksonConfigSerializer::new);
-        CONFIG = AutoConfig.getConfigHolder(MounderTweaksConfig.class).getConfig();
+        CONFIG = AutoConfig.register(MounderTweaksConfig.class, JanksonConfigSerializer::new).getConfig();
     }
 }
 

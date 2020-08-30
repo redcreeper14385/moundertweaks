@@ -114,6 +114,8 @@ public class CommonConfig implements ConfigData {
     @CollapsibleObject
     public Bonemeal bonemeal = new Bonemeal();
 
+    public boolean lampToggle = false;
+
     public static class Bonemeal {
         @Tooltip
         public boolean enable = true;
