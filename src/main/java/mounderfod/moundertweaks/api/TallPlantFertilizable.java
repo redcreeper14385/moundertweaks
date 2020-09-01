@@ -4,7 +4,6 @@ import mounderfod.moundertweaks.util.GrowableHelper;
 
 import java.util.Random;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Fertilizable;
 import net.minecraft.server.world.ServerWorld;
