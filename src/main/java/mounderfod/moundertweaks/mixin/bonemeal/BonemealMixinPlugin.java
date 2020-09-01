@@ -1,6 +1,6 @@
 package mounderfod.moundertweaks.mixin.bonemeal;
 
-import mounderfod.moundertweaks.MounderTweaksMain;
+import mounderfod.moundertweaks.impl.MounderTweaksMain;
 
 import java.util.List;
 import java.util.Set;

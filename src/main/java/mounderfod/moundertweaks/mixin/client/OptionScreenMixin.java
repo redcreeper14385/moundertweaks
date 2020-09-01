@@ -1,7 +1,7 @@
 package mounderfod.moundertweaks.mixin.client;
 
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
-import mounderfod.moundertweaks.MounderTweaksMain;
+import mounderfod.moundertweaks.impl.MounderTweaksMain;
 import mounderfod.moundertweaks.util.config.MounderTweaksConfig;
 
 import org.spongepowered.asm.mixin.Final;

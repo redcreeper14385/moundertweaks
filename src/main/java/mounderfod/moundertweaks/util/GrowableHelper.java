@@ -1,6 +1,6 @@
 package mounderfod.moundertweaks.util;
 
-import mounderfod.moundertweaks.MounderTweaksMain;
+import mounderfod.moundertweaks.impl.MounderTweaksMain;
 
 import java.util.Random;
 

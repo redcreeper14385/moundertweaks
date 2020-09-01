@@ -1,6 +1,6 @@
 package mounderfod.moundertweaks.mixin.client;
 
-import mounderfod.moundertweaks.MounderTweaksMain;
+import mounderfod.moundertweaks.impl.MounderTweaksMain;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

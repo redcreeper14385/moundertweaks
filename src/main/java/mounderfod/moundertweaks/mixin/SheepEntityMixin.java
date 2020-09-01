@@ -1,6 +1,6 @@
 package mounderfod.moundertweaks.mixin;
 
-import mounderfod.moundertweaks.MounderTweaksMain;
+import mounderfod.moundertweaks.impl.MounderTweaksMain;
 import mounderfod.moundertweaks.util.SharedConstants;
 
 import java.util.Map;
