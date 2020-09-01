@@ -1,4 +1,4 @@
-package mounderfod.moundertweaks;
+package mounderfod.moundertweaks.impl;
 
 import com.google.common.base.MoreObjects;
 import org.lwjgl.glfw.GLFW;

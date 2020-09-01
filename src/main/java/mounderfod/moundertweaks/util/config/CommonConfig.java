@@ -116,6 +116,8 @@ public class CommonConfig implements ConfigData {
 
     public boolean lampToggle = false;
 
+    public boolean harvestablePots = true;
+
     public static class Bonemeal {
         @Tooltip
         public boolean enable = true;

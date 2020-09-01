@@ -17,13 +17,13 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "mounderfod.moundertweaks.MounderTweaksMain"
+      "mounderfod.moundertweaks.impl.MounderTweaksMain"
     ],
     "client": [
-      "mounderfod.moundertweaks.MounderTweaksClient"
+      "mounderfod.moundertweaks.impl.MounderTweaksClient"
     ],
     "modmenu": [
-      "mounderfod.moundertweaks.util.MounderTweaksModmenuImpl"
+      "mounderfod.moundertweaks.impl.MounderTweaksModmenuImpl"
     ]
   },
   "mixins": [

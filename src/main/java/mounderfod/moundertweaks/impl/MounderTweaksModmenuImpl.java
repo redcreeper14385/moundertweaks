@@ -1,4 +1,4 @@
-package mounderfod.moundertweaks.util;
+package mounderfod.moundertweaks.impl;
 
 import io.github.prospector.modmenu.api.ConfigScreenFactory;
 import io.github.prospector.modmenu.api.ModMenuApi;

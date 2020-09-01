@@ -9,6 +9,7 @@
   ],
   "client": [
     "client.BambooBlockMixin",
+    "client.GameRendererMixin",
     "client.OptionScreenMixin",
     "client.PotionItemMixin"
   ],

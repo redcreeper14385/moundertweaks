@@ -55,6 +55,8 @@ dependencies {
 	modApi("io.github.prospector:modmenu:${project.modmenu_version}") {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
+
+	compileOnly("org.jetbrains:annotations:16.0.2")
 }
 
 processResources {
