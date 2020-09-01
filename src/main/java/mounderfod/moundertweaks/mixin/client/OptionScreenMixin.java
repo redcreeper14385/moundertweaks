@@ -1,6 +1,7 @@
 package mounderfod.moundertweaks.mixin.client;
 
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
+import mounderfod.moundertweaks.MounderTweaksMain;
 import mounderfod.moundertweaks.util.config.MounderTweaksConfig;
 
 import org.spongepowered.asm.mixin.Final;
@@ -34,7 +35,7 @@ public class OptionScreenMixin extends Screen {
     @Inject(at = @At("RETURN"), method = "init")
     public void drawConfigScreen(CallbackInfo ci) {
         // Only load if modmenu is not present
-        if (!FabricLoader.getInstance().isModLoaded("modmenu") && this.client != null) {
+        if (!FabricLoader.getInstance().isModLoaded("modmenu") && this.client != null && MounderTweaksMain.CONFIG.client.enableConfigButton) {
             this.addButton(new ButtonWidget(this.width / 2 - 100, this.height / 6 + 192, 200, 20, new TranslatableText("text.autoconfig.moundertweaks.title"), (buttonWidget) -> {
                 this.client.openScreen(AutoConfig.getConfigScreen(MounderTweaksConfig.class, this.parent).get());
             }));

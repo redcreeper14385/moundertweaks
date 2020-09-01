@@ -17,7 +17,7 @@ public final class GrowableHelper {
         if (world.getBlockState(pos.up()).getBlock() == block) {
             grow(world, block, pos.up());
         }
-        if (block == Blocks.CACTUS && new Random().nextInt(128) <= Math.toIntExact(MounderTweaksMain.CONFIG.common.bonemeal.sugarCaneChance)) {
+        if (block == Blocks.SUGAR_CANE && new Random().nextInt(128) <= Math.toIntExact(MounderTweaksMain.CONFIG.common.bonemeal.sugarCaneChance)) {
             world.setBlockState(pos.up(), block.getDefaultState());
         } else if (block == Blocks.CACTUS && new Random().nextInt(128) <= Math.toIntExact(MounderTweaksMain.CONFIG.common.bonemeal.cactiChance)) {
             world.setBlockState(pos.up(), block.getDefaultState());

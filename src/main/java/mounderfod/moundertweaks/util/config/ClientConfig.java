@@ -11,4 +11,10 @@ public class ClientConfig implements ConfigData {
 
     @Tooltip
     public boolean optimizedBamboo = true;
+
+    @Tooltip
+    public boolean enableConfigButton = true;
+
+    @Tooltip
+    public boolean noNightVisionFlashing = true;
 }
