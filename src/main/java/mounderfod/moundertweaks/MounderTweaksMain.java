@@ -5,15 +5,24 @@ import me.sargunvohra.mcmods.autoconfig1u.serializer.JanksonConfigSerializer;
 import mounderfod.moundertweaks.util.config.MounderTweaksConfig;
 import net.szum123321.tool_action_helper.api.ShovelPathHelper;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.block.RedstoneLampBlock;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.ItemEntity;
+import net.minecraft.entity.SpawnReason;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 
 public class MounderTweaksMain implements ModInitializer {
 
@@ -53,13 +62,26 @@ public class MounderTweaksMain implements ModInitializer {
         }
 
         UseBlockCallback.EVENT.register(((playerEntity, world, hand, blockHitResult) -> {
-            if (MounderTweaksMain.CONFIG.common.lampToggle) {
-                if (playerEntity.getStackInHand(hand).getItem() == Items.REDSTONE_TORCH) {
-                    world.setBlockState(blockHitResult.getBlockPos(), world.getBlockState(blockHitResult.getBlockPos()).getBlock().getDefaultState().with(RedstoneLampBlock.LIT, !world.getBlockState(blockHitResult.getBlockPos()).get(RedstoneLampBlock.LIT)));
-                    return ActionResult.SUCCESS;
+            ActionResult result = ActionResult.PASS;
+            BlockState usedBlockState = world.getBlockState(blockHitResult.getBlockPos());
+            Block usedBlock = usedBlockState.getBlock();
+            Item heldItem = playerEntity.getStackInHand(hand).getItem();
+            if(!world.isClient()) {
+                if (MounderTweaksMain.CONFIG.common.lampToggle) {
+                    if (heldItem == Items.REDSTONE_TORCH) {
+                        world.setBlockState(blockHitResult.getBlockPos(), usedBlock.getDefaultState().with(RedstoneLampBlock.LIT, !world.getBlockState(blockHitResult.getBlockPos()).get(RedstoneLampBlock.LIT)));
+                        result = ActionResult.SUCCESS;
+                    }
+                }
+                if (MounderTweaksMain.CONFIG.common.harvestablePots) {
+                    if (heldItem.isIn(FabricToolTags.SHOVELS) && usedBlock instanceof FlowerPotBlock && usedBlock != Blocks.FLOWER_POT) {
+                        world.setBlockState(blockHitResult.getBlockPos(), Blocks.FLOWER_POT.getDefaultState());
+                        EntityType.ITEM.spawn((ServerWorld) world, null, null, null, blockHitResult.getBlockPos(), SpawnReason.EVENT, false, false);
+                        result = ActionResult.SUCCESS;
+                    }
                 }
             }
-            return ActionResult.PASS;
+            return result;
         }));
     }
 
