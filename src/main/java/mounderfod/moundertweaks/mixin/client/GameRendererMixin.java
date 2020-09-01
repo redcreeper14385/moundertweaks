@@ -11,6 +11,10 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.entity.LivingEntity;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+
+@Environment(EnvType.CLIENT)
 @Mixin(GameRenderer.class)
 public class GameRendererMixin {
     @Inject(at = @At("TAIL"), method = "getNightVisionStrength", cancellable = true, locals = LocalCapture.CAPTURE_FAILSOFT)

@@ -5,11 +5,11 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "FallingBlockMixin",
-    "SheepEntityMixin",
-    "client.GameRendererMixin"
+    "SheepEntityMixin"
   ],
   "client": [
     "client.BambooBlockMixin",
+    "client.GameRendererMixin",
     "client.OptionScreenMixin",
     "client.PotionItemMixin"
   ],

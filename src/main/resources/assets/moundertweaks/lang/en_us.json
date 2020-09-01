@@ -63,11 +63,11 @@
     "text.autoconfig.moundertweaks.option.client.enableConfigButton.@Tooltip": "Only has effects when Modmenu is lot loaded",
     "text.autoconfig.moundertweaks.option.client.noNightVisionFlashing": "Disable night vision flashing",
     "text.autoconfig.moundertweaks.option.client.noNightVisionFlashing.@Tooltip": "Disable the night vision flashing when its time is less than 10 seconds",
-    "text.autoconfig.moundertweaks.category.common": "Common",
-    "text.autoconfig.moundertweaks.category.client": "Client",
-    "mounderfod.moundertweaks.coordinates": "Coordinates: ",
     "text.autoconfig.moundertweaks.option.common.lampToggle": "Toggleable Redstone Lamps",
     "text.autoconfig.moundertweaks.option.common.lampToggle.@Tooltip": "Enable toggling of redstone lamps with a redstone torch",
     "text.autoconfig.moundertweaks.option.common.harvestablePots": "Flower pot flower harvesting",
-    "text.autoconfig.moundertweaks.option.common.harvestablePots.@Tooltip": "Enable harvesting of the flower inside a flower pot when right-clicking with a shovel"
+    "text.autoconfig.moundertweaks.option.common.harvestablePots.@Tooltip": "Enable harvesting of the flower inside a flower pot when right-clicking with a shovel",
+    "text.autoconfig.moundertweaks.category.common": "Common",
+    "text.autoconfig.moundertweaks.category.client": "Client",
+    "mounderfod.moundertweaks.coordinates": "Coordinates: "
 }
