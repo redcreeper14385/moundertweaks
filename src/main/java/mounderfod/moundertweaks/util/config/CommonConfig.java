@@ -99,6 +99,10 @@ public class CommonConfig implements ConfigData {
 
     @RequiresRestart
     @Tooltip
+    public boolean dirtToPath = true;
+
+    @RequiresRestart
+    @Tooltip
     public boolean explosiveFuel = true;
 
     @RequiresRestart
