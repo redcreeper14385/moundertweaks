@@ -4,7 +4,9 @@
 Developed by mounderfod (aka redcreeper14385)
 ### Features
 #### Shovel Grinding
-Right-click with a shovel to turn cobblestone to gravel, gravel to sand and dirt to coarse dirt. <br>
+Right-click with a shovel to turn cobblestone to gravel, and gravel to sand. <br>
+#### Dirt To Path
+No more waiting for the grass to grow, you can directly convert dirt to grass path with a shovel!
 #### Explosive and Fiery Fuel
 Gunpowder and Blaze Rods can be used as a furnace fuel, smelting six items each. Somewhat inspired by tfarecnim's hilarious Blast Processing mod (https://www.curseforge.com/minecraft/mc-mods/blast-processing)
 #### Useful Poisonous Potatoes
@@ -23,6 +25,12 @@ Potions no longer have the enchantment glint.
 Bamboo performance is improved by making some changes to ambient occlusion.
 #### Bonemealable Cactus, Sugarcane and Nether Wart
 Cacti, Sugarcane and Nether wart can be bonemealed, with a configurable chance to grow per bonemeal.
+#### No More Night Vision Flashing
+You can now disable the flashing night vision effect!
+#### Harvestable Flower Pots
+Right-click a flower pot with a shovel to remove the flower from the pot without having to break the pot.
+#### Toggleable Redstone Lamps
+You can turn Redstone Lamps on and off by right-clicking with a redstone torch. Note that redstone will still affect the lamp as normal.
 #### Configuration
 Almost every feature of the mod can be disabled and customised to your will, with an easy to use JSON file! You can also access the config screen from Mod menu. 
 ### Downloads
