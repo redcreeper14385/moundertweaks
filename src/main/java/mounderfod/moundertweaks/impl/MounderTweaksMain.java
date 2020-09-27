@@ -3,32 +3,35 @@ package mounderfod.moundertweaks.impl;
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import me.sargunvohra.mcmods.autoconfig1u.serializer.JanksonConfigSerializer;
 import mounderfod.moundertweaks.util.config.MounderTweaksConfig;
-import net.szum123321.tool_action_helper.api.ShovelPathHelper;
-
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FlowerPotBlock;
-import net.minecraft.block.RedstoneLampBlock;
+import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.player.UseBlockCallback;
+import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
+import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
+import net.minecraft.block.*;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
+import net.szum123321.tool_action_helper.api.ShovelPathHelper;
 
-import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.event.player.UseBlockCallback;
-import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
-import net.fabricmc.fabric.api.registry.FuelRegistry;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class MounderTweaksMain implements ModInitializer {
 
     public static final MounderTweaksConfig CONFIG;
+    public static final Logger LOGGER = LogManager.getLogger(MounderTweaks.class);
 
     @Override
     public void onInitialize() {
+        // PogCham[
+        LOGGER.log(Level.INFO, "'PogCham[' - BoogieMonster1O1");
+        LOGGER.log(Level.INFO, "MounderTweaks Loaded!");
+
         // Compostable Poisonous Potatoes
         if (CONFIG.common.compostablePoisonousPotatoes) {
             CompostingChanceRegistry.INSTANCE.add(Items.POISONOUS_POTATO, 0.1f);
