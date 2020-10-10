@@ -57,9 +57,6 @@ dependencies {
 	}
 
 	compileOnly("org.jetbrains:annotations:16.0.2")
-
-	modApi "me.shedaniel.cloth.api:cloth-api:${project.cloth_api_version}"
-	include "me.shedaniel.cloth.api:cloth-api:${project.cloth_api_version}"
 }
 
 processResources {
